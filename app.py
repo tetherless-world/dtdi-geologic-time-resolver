@@ -40,25 +40,25 @@ def hello():
     return json.dumps(data)
 
 
-@app.route("/resolve-within", methods=['GET'])
-def encompassed():
+def process_inputs():
     min_age = float(request.args.get('min', ''))
     max_age = float(request.args.get('max', ''))
 
     if min_age is None or max_age is None:
         abort(400)
 
+    return min_age, max_age
+
+
+@app.route("/resolve-within", methods=['GET'])
+def resolve_within():
+    min_age, max_age = process_inputs()
     return resolve_geologic_time_within(min_age, max_age)
 
 
 @app.route("/resolve-intersects", methods=['GET'])
-def geo():
-    min_age = float(request.args.get('min', ''))
-    max_age = float(request.args.get('max', ''))
-
-    if min_age is None or max_age is None:
-        abort(400)
-
+def resolve_intersects():
+    min_age, max_age = process_inputs()
     return resolve_geologic_time_intersects(min_age, max_age)
 
 
