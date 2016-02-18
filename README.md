@@ -4,7 +4,7 @@ This service returns a list (in JSON) of geologic time intervals that intersect 
 
 example:
 
-``curl "127.0.0.1:5000/resolve?min=1000&max=1200"``
+``curl "127.0.0.1:5000/resolve-intersects?min=1000&max=1200"``
 
 results:
 
@@ -12,81 +12,81 @@ results:
 [  
    {  
       "pid":0,
-      "eag":2500,
-      "rid":[  
-         47900
-      ],
-      "oid":752,
+      "lag":541,
       "typ":"int",
-      "nam":"Proterozoic",
-      "lvl":1,
       "col":"#F73563",
-      "lag":541
-   },
-   {  
-      "pid":752,
-      "eag":1600,
+      "eag":2500,
+      "nam":"Proterozoic",
       "rid":[  
          47900
       ],
-      "oid":755,
-      "typ":"int",
-      "nam":"Mesoproterozoic",
-      "lvl":2,
-      "col":"#FDB462",
-      "lag":1000
+      "lvl":1,
+      "oid":752
    },
    {  
       "pid":752,
-      "eag":1000,
-      "rid":[  
-         47900
-      ],
-      "oid":754,
+      "lag":541,
       "typ":"int",
-      "nam":"Neoproterozoic",
-      "lvl":2,
       "col":"#FEB342",
-      "lag":541
-   },
-   {  
-      "pid":755,
-      "eag":1400,
+      "eag":1000,
+      "nam":"Neoproterozoic",
       "rid":[  
          47900
       ],
-      "oid":765,
-      "typ":"int",
-      "nam":"Ectasian",
-      "lvl":3,
-      "col":"#F3CC8A",
-      "lag":1200
+      "lvl":2,
+      "oid":754
    },
    {  
-      "pid":755,
-      "eag":1200,
+      "pid":752,
+      "lag":1000,
+      "typ":"int",
+      "col":"#FDB462",
+      "eag":1600,
+      "nam":"Mesoproterozoic",
       "rid":[  
          47900
       ],
-      "oid":764,
-      "typ":"int",
-      "nam":"Stenian",
-      "lvl":3,
-      "col":"#FED99A",
-      "lag":1000
+      "lvl":2,
+      "oid":755
    },
    {  
       "pid":754,
+      "lag":850,
+      "typ":"int",
+      "col":"#FEBF4E",
       "eag":1000,
+      "nam":"Tonian",
       "rid":[  
          47900
       ],
-      "oid":763,
-      "typ":"int",
-      "nam":"Tonian",
       "lvl":3,
-      "col":"#FEBF4E",
-      "lag":850
+      "oid":763
+   },
+   {  
+      "pid":755,
+      "lag":1000,
+      "typ":"int",
+      "col":"#FED99A",
+      "eag":1200,
+      "nam":"Stenian",
+      "rid":[  
+         47900
+      ],
+      "lvl":3,
+      "oid":764
+   },
+   {  
+      "pid":755,
+      "lag":1200,
+      "typ":"int",
+      "col":"#F3CC8A",
+      "eag":1400,
+      "nam":"Ectasian",
+      "rid":[  
+         47900
+      ],
+      "lvl":3,
+      "oid":765
    }
 ]
 ```
