@@ -41,8 +41,8 @@ def hello():
 
 
 def process_inputs():
-    min_age = float(request.args.get('min', ''))
-    max_age = float(request.args.get('max', ''))
+    min_age = request.args.get('min', None, type=float)
+    max_age = request.args.get('max', None, type=float)
 
     if min_age is None or max_age is None:
         abort(400)
