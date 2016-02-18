@@ -1,1 +1,92 @@
-# dtdi-geologic-time-resolver
+# DTDI Geologic Time Resolver service
+
+This service returns a list (in JSON) of geologic time intervals that intersect with or are encompassed by the specified min and max age (specified in Millions of years ago).
+
+example:
+
+``curl "127.0.0.1:5000/resolve?min=1000&max=1200"``
+
+results:
+
+```
+[  
+   {  
+      "pid":0,
+      "eag":2500,
+      "rid":[  
+         47900
+      ],
+      "oid":752,
+      "typ":"int",
+      "nam":"Proterozoic",
+      "lvl":1,
+      "col":"#F73563",
+      "lag":541
+   },
+   {  
+      "pid":752,
+      "eag":1600,
+      "rid":[  
+         47900
+      ],
+      "oid":755,
+      "typ":"int",
+      "nam":"Mesoproterozoic",
+      "lvl":2,
+      "col":"#FDB462",
+      "lag":1000
+   },
+   {  
+      "pid":752,
+      "eag":1000,
+      "rid":[  
+         47900
+      ],
+      "oid":754,
+      "typ":"int",
+      "nam":"Neoproterozoic",
+      "lvl":2,
+      "col":"#FEB342",
+      "lag":541
+   },
+   {  
+      "pid":755,
+      "eag":1400,
+      "rid":[  
+         47900
+      ],
+      "oid":765,
+      "typ":"int",
+      "nam":"Ectasian",
+      "lvl":3,
+      "col":"#F3CC8A",
+      "lag":1200
+   },
+   {  
+      "pid":755,
+      "eag":1200,
+      "rid":[  
+         47900
+      ],
+      "oid":764,
+      "typ":"int",
+      "nam":"Stenian",
+      "lvl":3,
+      "col":"#FED99A",
+      "lag":1000
+   },
+   {  
+      "pid":754,
+      "eag":1000,
+      "rid":[  
+         47900
+      ],
+      "oid":763,
+      "typ":"int",
+      "nam":"Tonian",
+      "lvl":3,
+      "col":"#FEBF4E",
+      "lag":850
+   }
+]
+```
