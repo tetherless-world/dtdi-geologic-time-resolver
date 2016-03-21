@@ -31,6 +31,10 @@ def within(interval, min_age, max_age):
 
 def resolve_geologic_time_within(min_age, max_age):
     z = [interval for interval in data["records"] if within(interval, min_age, max_age)]
+
+    if not z:
+        return z
+
     z.sort(key=lambda x: x["lvl"], reverse=True)
     return json.dumps(z[0])
 
