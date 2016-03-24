@@ -4,7 +4,11 @@ This service returns a list (in JSON) of geologic time intervals that intersect 
 
 example:
 
+locally running instance:
 ``curl "127.0.0.1:5000/resolve-intersects?min=1000&max=1200"``
+
+public service:
+``curl "https://deeptime.tw.rpi.edu/geologic-intervals/resolve-intersects?min=1000&max=1200"``
 
 results:
 

@@ -1,7 +1,9 @@
 from flask import Flask, request, abort
 import json
+from ReverseProxied import ReverseProxied
 
 app = Flask(__name__)
+app.wsgi_app = ReverseProxied(app.wsgi_app)
 
 with open("intervals.json") as b:
     data = json.load(b)
